@@ -1,15 +1,33 @@
-import React from "react";
-import { View, Image, TextInput, StyleSheet, Button, TouchableOpacity, Text } from "react-native";
+import React, { useContext } from "react";
+import { View, StyleSheet, Text } from "react-native";
+import TextInputConponent from "../components/TextInputConponent";
+import { ThemeContext } from "../Hooks/ThemeContext";
+import BoxButtonComponent from "../components/BoxButtonComponent";
+import TextButtonComponent from "../components/TextButtonComponent";
+import HeaderAuthComponent from "../components/HeaderAuthComponent";
+import SignUpImg from "../assets/images/signup.png"
 
-const SignUpScreen = ({navigation}) => {
+const SignUpScreen = ({ navigation }) => {
+  const { themeState } = useContext(ThemeContext);
   return (
-    <View style={styles.container}>
-      <Image source={require("../../assets/icon.png")} style={styles.logo} />
-      <TextInput style={styles.input} placeholder="Username" />
-      <TextInput style={styles.input} placeholder="Password" secureTextEntry />
-      <Button title="Daftar" onPress={() => {}} />
-      <TouchableOpacity ><Text style={{textAlign:"center"}} onPress={() => navigation.replace("SignIn")}>Belum memiliki akun? <Text style={{fontWeight:"bold"}}>Daftar</Text></Text></TouchableOpacity>
-
+    <View
+      style={[styles.container, { backgroundColor: themeState.colorPalette_1 }]}
+    >
+      <HeaderAuthComponent title={"Daftar"} source={SignUpImg}/>
+      <TextInputConponent title="Email" />
+      <TextInputConponent title="Nomer Telepon" />
+      <TextInputConponent title="Password" password={true} />
+      <TextInputConponent title="Konfirmasi Password" password={true} />
+      <BoxButtonComponent onPress={() => {}} rounded={true} title={"Daftar"} />
+      <TextButtonComponent
+        onPress={() => navigation.push("SignIn")}
+        title={
+          <Text style={{ textAlign: "center" }}>
+            Sudah memiliki akun?{" "}
+            <Text style={{ fontWeight: "bold" }}>Masuk</Text>
+          </Text>
+        }
+      />
     </View>
   );
 };
@@ -21,20 +39,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     padding: 16,
   },
-  logo: {
-    width: 150,
-    height: 150,
-    marginBottom: 32,
-  },
-  input: {
-    width: "100%",
-    height: 40,
-    borderColor: "gray",
-    borderWidth: 1,
-    borderRadius: 5,
-    marginBottom: 16,
-    paddingHorizontal: 10,
-  },
 });
 
 export default SignUpScreen;
+

@@ -1,6 +1,9 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { FlatList, StyleSheet, Text, View } from "react-native";
 import { Ionicons } from '@expo/vector-icons';
+import ChatbotScreen from "../views/ChatbotScreen";
+import KamusScreen from "../views/KamusScreen";
+import SusunKataScreen from "../views/SusunKataScreen";
 
 const HomeScreen = () => {
   const data = [
@@ -20,11 +23,7 @@ const HomeScreen = () => {
   return (
     <View>
       <View
-        style={{
-          flexGrow: 1,
-          flexDirection: "row",
-          justifyContent: "space-between",
-        }}
+        style={styles.containerRow}
       >
         <Text style={{ padding: 20, fontSize: 20, fontWeight: "bold" }}>
           Bahasa
@@ -49,10 +48,13 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     padding: 10,
   },
+  containerRow: {
+    flexGrow: 1,
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
   box: {
     flex: 1,
-    // alignItems: 'center',
-    // justifyContent: 'center',
     borderRadius: 10,
     margin: 10,
     padding: 10,
@@ -71,15 +73,17 @@ const styles = StyleSheet.create({
   },
 });
 
+
+
 const Stack = createNativeStackNavigator();
 
 function AppRouter() {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Home" component={HomeScreen} />
-      {/* <Stack.Screen name="Chatbot" component={ChatbotScreen} />
+      <Stack.Screen name="Chatbot" component={ChatbotScreen} />
       <Stack.Screen name="Kamus" component={KamusScreen} />
-      <Stack.Screen name="SusunKata" component={SusunKataScreen} /> */}
+      <Stack.Screen name="SusunKata" component={SusunKataScreen} />
     </Stack.Navigator>
   );
 }

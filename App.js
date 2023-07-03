@@ -1,13 +1,43 @@
 import AuthRouter from "./src/routes/AuthRouter";
 import AppRouter from "./src/routes/AppRouter";
 import { NavigationContainer } from "@react-navigation/native";
-import { StatusBar } from "react-native";
+import { StatusBar, Text, View } from "react-native";
+import ThemeContextProvider, { ThemeContext } from "./src/Hooks/ThemeContext";
+import { useContext, useEffect, useState } from "react";
+// import { AppLoading } from "expo";
+import { useFonts, loadAsync } from "expo-font";
+
 export default function App() {
-  const isLogin = true;
+  const [fontsLoaded, setFontsLoaded] = useState(false);
+
+  useEffect(() => {
+    const loadFontsAsync = async () => {
+      await loadAsync({
+        "Poppins-Regular": require("./src/assets/fonts/Poppins-Regular.ttf"),
+        "Poppins-Bold": require("./src/assets/fonts/Poppins-Bold.ttf"),
+      });
+      setFontsLoaded(true);
+    };
+
+    loadFontsAsync();
+  }, []);
+
+  if (!fontsLoaded) {
+    return (
+      <View>
+        <Text>Loading...</Text>
+      </View>
+    );
+  }
+
+  const isLogin = false;
+
   return (
-    <NavigationContainer>
-      {isLogin ? <AppRouter /> : <AuthRouter />}
-      <StatusBar backgroundColor="transparent" />
-    </NavigationContainer>
+    <ThemeContextProvider>
+      <NavigationContainer>
+        {isLogin ? <AppRouter /> : <AuthRouter />}
+        <StatusBar translucent={false} backgroundColor={"#5273E1"} />
+      </NavigationContainer>
+    </ThemeContextProvider>
   );
 }

@@ -8,7 +8,7 @@ const Stack = createNativeStackNavigator();
 
 function AuthRouter() {
   return (
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
+    <Stack.Navigator  screenOptions={{ headerShown: false,animation:"flip" }}>
       <Stack.Screen name="Auth" component={AuthScreen} />
       <Stack.Screen name="SignIn" component={SignInScreen} />
       <Stack.Screen name="SignUp" component={SignUpScreen} />
