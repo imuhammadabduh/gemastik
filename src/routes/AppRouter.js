@@ -1,9 +1,11 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { FlatList, StyleSheet, Text, View } from "react-native";
-import { Ionicons } from '@expo/vector-icons';
+import { Ionicons } from "@expo/vector-icons";
 import ChatbotScreen from "../views/ChatbotScreen";
 import KamusScreen from "../views/KamusScreen";
 import SusunKataScreen from "../views/SusunKataScreen";
+import ParagraphComponent from "../components/ParagraphComponent";
+import TitleComponent from "../components/TitleComponent";
 
 const HomeScreen = () => {
   const data = [
@@ -12,32 +14,74 @@ const HomeScreen = () => {
     { id: 3, title: "Bahasa Jawa 3" },
     { id: 4, title: "Bahasa Jawa 4" },
     { id: 5, title: "Bahasa Jawa 5" },
+    { id: 5, title: "Bahasa Jawa 5" },
+    { id: 5, title: "Bahasa Jawa 5" },
+    { id: 5, title: "Bahasa Jawa 5" },
+    { id: 5, title: "Bahasa Jawa 5" },
+    { id: 5, title: "Bahasa Jawa 5" },
+    { id: 5, title: "Bahasa Jawa 5" },
+    { id: 5, title: "Bahasa Jawa 5" },
+    { id: 5, title: "Bahasa Jawa 5" },
+    { id: 5, title: "Bahasa Jawa 5" },
+    { id: 5, title: "Bahasa Jawa 5" },
+    { id: 5, title: "Bahasa Jawa 5" },
+    { id: 5, title: "Bahasa Jawa 5" },
+    { id: 5, title: "Bahasa Jawa 5" },
+    { id: 5, title: "Bahasa Jawa 5" },
+    { id: 5, title: "Bahasa Jawa 5" },
+    { id: 5, title: "Bahasa Jawa 5" },
+    { id: 5, title: "Bahasa Jawa 5" },
   ];
 
-  const renderItem = ({ item }) => (
-    <View style={styles.box}>
-      <Text style={styles.title}>{item.title}</Text>
-    </View>
-  );
+  const renderItem = ({ item }) => {
+    const randomNumber = Math.floor(Math.random() * 1000) + 1;
+    return (
+      <View
+        style={[
+          styles.box,
+          {
+            // marginBottom: 10,
+            backgroundColor: `hsl(${randomNumber},50%,70%)`,
+          },
+        ]}
+      >
+        <ParagraphComponent
+          style={[styles.title, { color: `hsl(${randomNumber},50%,20%)` }]}
+        >
+          {item.title}
+        </ParagraphComponent>
+      </View>
+    );
+  };
 
   return (
-    <View>
-      <View
-        style={styles.containerRow}
-      >
-        <Text style={{ padding: 20, fontSize: 20, fontWeight: "bold" }}>
+    <View style={styles.container}>
+      <View style={styles.headerContainer}>
+        {/* <Text style={{ padding: 20, fontSize: 20, fontWeight: "bold" }}>
           Bahasa
-        </Text>
-        <Text style={{ padding: 20, fontSize: 20, fontWeight: "bold" }}>
-        <Ionicons name="search" size={24} color="grey" />
-        </Text>
+        </Text> */}
+        <TitleComponent size={20} title={"Bahasa"} />
+        {/* <Text style={{ padding: 20, fontSize: 20, fontWeight: "bold" }}> */}
+        <Ionicons
+          style={{ fontSize: 25 }}
+          name="search"
+          size={25}
+          color="grey"
+        />
+        {/* </Text> */}
       </View>
       <FlatList
         data={data}
         renderItem={renderItem}
         keyExtractor={(item) => item.id.toString()}
         numColumns={2}
-        contentContainerStyle={styles.container}
+        style={{
+          flex:1,
+              paddingTop: 40,
+              // padding: 10,
+
+
+            }}
       />
     </View>
   );
@@ -45,35 +89,34 @@ const HomeScreen = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flexGrow: 1,
-    padding: 10,
+    flex: 1,
+              // padding: 10,
+
+    position: "relative",
+    marginHorizontal: 10,
   },
-  containerRow: {
-    flexGrow: 1,
+  headerContainer: {
+
+    display: "none",
     flexDirection: "row",
+    alignItems: "center",
     justifyContent: "space-between",
+    backgroundColor:"red",
+    marginVertical: 10,
   },
   box: {
     flex: 1,
     borderRadius: 10,
-    margin: 10,
+    margin: 5,
     padding: 10,
-
     height: 100,
-    backgroundColor: "lightblue",
-    shadowColor: 'black',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.2,
-    shadowRadius: 4,
-    elevation: 3, // For Android
+    elevation: 3,
   },
   title: {
     fontSize: 16,
-    // fontWeight: "bold",
+    fontFamily: "Poppins-Bold",
   },
 });
-
-
 
 const Stack = createNativeStackNavigator();
 

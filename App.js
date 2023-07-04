@@ -3,9 +3,8 @@ import AppRouter from "./src/routes/AppRouter";
 import { NavigationContainer } from "@react-navigation/native";
 import { StatusBar, Text, View } from "react-native";
 import ThemeContextProvider, { ThemeContext } from "./src/Hooks/ThemeContext";
-import { useContext, useEffect, useState } from "react";
-// import { AppLoading } from "expo";
-import { useFonts, loadAsync } from "expo-font";
+import {  useEffect, useState } from "react";
+import {  loadAsync } from "expo-font";
 
 export default function App() {
   const [fontsLoaded, setFontsLoaded] = useState(false);
@@ -30,7 +29,7 @@ export default function App() {
     );
   }
 
-  const isLogin = false;
+  const isLogin = true;
 
   return (
     <ThemeContextProvider>
