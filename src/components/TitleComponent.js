@@ -9,7 +9,6 @@ const TitleComponent = ({
   size = 25,
 }) => {
   const { themeState } = useContext(ThemeContext);
-
   return (
     <Text
       style={[styles.text,
