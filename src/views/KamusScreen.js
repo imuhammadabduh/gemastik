@@ -7,16 +7,16 @@ import { useRoute } from "@react-navigation/native";
 
 
 const datas = [{
-  language: "Stronghold",
-  translate: "Treeflex"
+  language: "kulo",
+  translate: "aku"
 }, {
-  language: "Home Ing",
-  translate: "Gembucket"
+  language: "koe",
+  translate: "kamu"
 }, {
-  language: "Toughjoyfax",
-  translate: "Rank"
+  language: "dewe",
+  translate: "kami"
 }, {
-  language: "Stringtough",
+  language: "mangan",
   translate: "Transcof"
 }, {
   language: "Holdlamis",

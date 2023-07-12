@@ -18,7 +18,7 @@ const SignInScreen = ({ navigation }) => {
       <TextButtonComponent title={"Lupa password?"} position="left" />
       <BoxButtonComponent onPress={() => {}} rounded={true} title={"Masuk"} />
       <TextButtonComponent
-        onPress={() => navigation.push("SignUp")}
+        onPress={() => navigation.replace("SignUp")}
         title={
           <Text style={{ textAlign: "center" }}>
             Belum memiliki akun?{" "}

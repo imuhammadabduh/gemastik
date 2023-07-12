@@ -28,12 +28,12 @@ const AuthScreen = ({ navigation }) => {
           source={require("../assets/images/auth.png")}
           style={styles.logo}
         />
-        <TitleComponent title={"Hai, Bahasaer's!"} />
+        <TitleComponent title={"Hai, APBBDIer's!"} />
 
         <ParagraphComponent style={{ fontSize: 18, textAlign: "center" }}>
-          "Error: Invalid hook call. Hooks can only be called inside of the body
-          of a function component. This could happen for one of the following
-          reasons"
+          "Ayo berkumpul bersama kami, Disini kita akan belajar banyak sekali
+          bahasa-bahasa yang ada diindonesia. mulai dari sabang sampai merauke,
+          ayo telusuri bersama kami!"
         </ParagraphComponent>
       </View>
       <View style={{ width: "100%", position: "absolute", bottom: 10 }}>

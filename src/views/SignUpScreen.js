@@ -20,7 +20,7 @@ const SignUpScreen = ({ navigation }) => {
       <TextInputConponent title="Konfirmasi Password" password={true} />
       <BoxButtonComponent onPress={() => {}} rounded={true} title={"Daftar"} />
       <TextButtonComponent
-        onPress={() => navigation.push("SignIn")}
+        onPress={() => navigation.replace("SignIn")}
         title={
           <Text style={{ textAlign: "center" }}>
             Sudah memiliki akun?{" "}
