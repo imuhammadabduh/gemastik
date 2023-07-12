@@ -20,68 +20,53 @@ export default function ChatbotScreen() {
         ref={scrollViewRef}
         onContentSizeChange={handleContentSizeChange}
       >
+
         <ItemChatComponent
-          nameAdmin={"Bot"}
-          msgAdmin={"Apa yang anda lakukan"}
-          isBot={true}
-        />
-        <ItemChatComponent
-          nameAdmin={"Bot"}
-          msgAdmin={"Apa yang anda lakukan"}
+          nameAdmin={"(Aku) Andy"}
+          msgAdmin={"Halo bot"}
           isBot={false}
         />
         <ItemChatComponent
           nameAdmin={"Bot"}
-          msgAdmin={"Apa yang anda lakukan"}
+          msgAdmin={"Halo juga, Apa yang kamu lakukan Andy?"}
           isBot={true}
         />
         <ItemChatComponent
-          nameAdmin={"Bot"}
+          nameAdmin={"(Aku) Andy"}
           msgAdmin={
-            "Apa yang anda adaa awd awd awda sd awd asd awd awd awd awd awd awdawd awd awd awdaw dawd awd awd awd awd a lakukan"
+            "ga papa, apa kau bisa pake bahasa jawa?"
           }
           isBot={false}
         />
         <ItemChatComponent
           nameAdmin={"Bot"}
-          msgAdmin={"Apa yang anda lakukan"}
+          msgAdmin={"oh tentu, kulo ahlinya-ahli, wkwkwk"}
           isBot={true}
         />
         <ItemChatComponent
           nameAdmin={"Bot"}
-          msgAdmin={"Apa yang anda lakukan"}
+          msgAdmin={"dewe iso ngobrol ngango boso jowo saiki!"}
           isBot={true}
         />
         <ItemChatComponent
-          nameAdmin={"Bot"}
-          msgAdmin={"Apa yang anda lakukan"}
+          nameAdmin={"(Aku) Andy"}
+          msgAdmin={"Weh keren tenan koe iso boso jowo"}
           isBot={false}
         />
         <ItemChatComponent
           nameAdmin={"Bot"}
-          msgAdmin={"Apa yang anda lakukan"}
+          msgAdmin={"wah suwun, qulo dirancang ben ahli nang boso jowo, dadi koe iso ngobrol karo aku, kalo koe ndue waktu luang iso ngobrol karo aku nganggo obrolan iki!"}
           isBot={true}
         />
-        <ItemChatComponent
-          nameAdmin={"Bot"}
-          msgAdmin={"Apa yang anda lakukan"}
-          isBot={true}
-        />
-        <ItemChatComponent
-          nameAdmin={"Bot"}
-          msgAdmin={"Apa yang anda lakukan"}
-          isBot={true}
-        />
-        <ItemChatComponent nameAdmin={"Bot"} msgAdmin={"."} isBot={false} />
-        <ItemChatComponent
-          nameAdmin={"Bot"}
-          msgAdmin={"Apa yang anda lakukan"}
-          isBot={true}
-        />
-        <ItemChatComponent
-          nameAdmin={"Bot"}
-          msgAdmin={"Apa yang anda lakukan"}
+                <ItemChatComponent
+          nameAdmin={"(Aku) Andy"}
+          msgAdmin={"cobo koe ajari aku bahasa jowo seng angel?"}
           isBot={false}
+        />
+                <ItemChatComponent
+          nameAdmin={"Bot"}
+          msgAdmin={"maap, kulo jek di dandani(maintenence)"}
+          isBot={true}
         />
       </ScrollView>
       <View

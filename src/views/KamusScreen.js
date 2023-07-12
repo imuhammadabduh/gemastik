@@ -6,307 +6,191 @@ import { useRoute } from "@react-navigation/native";
 
 
 
-const datas = [{
-  language: "kulo",
-  translate: "aku"
-}, {
-  language: "koe",
-  translate: "kamu"
-}, {
-  language: "dewe",
-  translate: "kami"
-}, {
-  language: "mangan",
-  translate: "Transcof"
-}, {
-  language: "Holdlamis",
-  translate: "Zontrax"
-}, {
-  language: "Sonsing",
-  translate: "Sonsing"
-}, {
-  language: "Toughjoyfax",
-  translate: "Aerified"
-}, {
-  language: "Bytecard",
-  translate: "Subin"
-}, {
-  language: "Matsoft",
-  translate: "Prodder"
-}, {
-  language: "Konklux",
-  translate: "Pannier"
-}, {
-  language: "Gembucket",
-  translate: "Aerified"
-}, {
-  language: "Kanlam",
-  translate: "Subin"
-}, {
-  language: "Vagram",
-  translate: "Bamity"
-}, {
-  language: "Holdlamis",
-  translate: "Keylex"
-}, {
-  language: "Viva",
-  translate: "Voltsillam"
-}, {
-  language: "Transcof",
-  translate: "Alpha"
-}, {
-  language: "Daltfresh",
-  translate: "Bytecard"
-}, {
-  language: "Sub-Ex",
-  translate: "Redhold"
-}, {
-  language: "Bytecard",
-  translate: "Job"
-}, {
-  language: "Cookley",
-  translate: "Zoolab"
-}, {
-  language: "Tempsoft",
-  translate: "Fixflex"
-}, {
-  language: "Voltsillam",
-  translate: "Zamit"
-}, {
-  language: "Sonsing",
-  translate: "Bitchip"
-}, {
-  language: "Tampflex",
-  translate: "Tampflex"
-}, {
-  language: "Flexidy",
-  translate: "Sonair"
-}, {
-  language: "Biodex",
-  translate: "Ventosanzap"
-}, {
-  language: "Rank",
-  translate: "Ventosanzap"
-}, {
-  language: "Sonsing",
-  translate: "Bytecard"
-}, {
-  language: "Job",
-  translate: "Otcom"
-}, {
-  language: "Otcom",
-  translate: "Domainer"
-}, {
-  language: "Matsoft",
-  translate: "Treeflex"
-}, {
-  language: "Ronstring",
-  translate: "Duobam"
-}, {
-  language: "Greenlam",
-  translate: "Sub-Ex"
-}, {
-  language: "Home Ing",
-  translate: "Sub-Ex"
-}, {
-  language: "Redhold",
-  translate: "Voyatouch"
-}, {
-  language: "Kanlam",
-  translate: "Fixflex"
-}, {
-  language: "Latlux",
-  translate: "Sub-Ex"
-}, {
-  language: "Veribet",
-  translate: "Flowdesk"
-}, {
-  language: "Toughjoyfax",
-  translate: "Daltfresh"
-}, {
-  language: "Lotlux",
-  translate: "Namfix"
-}, {
-  language: "It",
-  translate: "Zathin"
-}, {
-  language: "Gembucket",
-  translate: "Lotstring"
-}, {
-  language: "Home Ing",
-  translate: "Keylex"
-}, {
-  language: "Zaam-Dox",
-  translate: "Namfix"
-}, {
-  language: "Redhold",
-  translate: "Transcof"
-}, {
-  language: "Voyatouch",
-  translate: "Alphazap"
-}, {
-  language: "Bytecard",
-  translate: "Temp"
-}, {
-  language: "Duobam",
-  translate: "Zathin"
-}, {
-  language: "Cardguard",
-  translate: "Bitchip"
-}, {
-  language: "Flexidy",
-  translate: "Rank"
-}, {
-  language: "Keylex",
-  translate: "Bytecard"
-}, {
-  language: "Zathin",
-  translate: "Domainer"
-}, {
-  language: "Stim",
-  translate: "Domainer"
-}, {
-  language: "Viva",
-  translate: "Regrant"
-}, {
-  language: "Zamit",
-  translate: "Tampflex"
-}, {
-  language: "Gembucket",
-  translate: "Tin"
-}, {
-  language: "Tresom",
-  translate: "Overhold"
-}, {
-  language: "Sonsing",
-  translate: "Zamit"
-}, {
-  language: "Tres-Zap",
-  translate: "Duobam"
-}, {
-  language: "Tresom",
-  translate: "Home Ing"
-}, {
-  language: "Veribet",
-  translate: "Sub-Ex"
-}, {
-  language: "Alpha",
-  translate: "Bitchip"
-}, {
-  language: "Rank",
-  translate: "Fixflex"
-}, {
-  language: "Tresom",
-  translate: "Tin"
-}, {
-  language: "Solarbreeze",
-  translate: "Redhold"
-}, {
-  language: "Treeflex",
-  translate: "Viva"
-}, {
-  language: "Regrant",
-  translate: "Veribet"
-}, {
-  language: "Konklab",
-  translate: "Prodder"
-}, {
-  language: "Opela",
-  translate: "Viva"
-}, {
-  language: "Aerified",
-  translate: "Duobam"
-}, {
-  language: "Wrapsafe",
-  translate: "Cardify"
-}, {
-  language: "Veribet",
-  translate: "Cookley"
-}, {
-  language: "Tresom",
-  translate: "Treeflex"
-}, {
-  language: "Stringtough",
-  translate: "Redhold"
-}, {
-  language: "Redhold",
-  translate: "It"
-}, {
-  language: "Zamit",
-  translate: "Flexidy"
-}, {
-  language: "Fixflex",
-  translate: "Fix San"
-}, {
-  language: "Toughjoyfax",
-  translate: "Y-Solowarm"
-}, {
-  language: "Kanlam",
-  translate: "Vagram"
-}, {
-  language: "Sonair",
-  translate: "Tres-Zap"
-}, {
-  language: "Zontrax",
-  translate: "Redhold"
-}, {
-  language: "Sub-Ex",
-  translate: "Lotstring"
-}, {
-  language: "Treeflex",
-  translate: "Stronghold"
-}, {
-  language: "Transcof",
-  translate: "Bitchip"
-}, {
-  language: "Ronstring",
-  translate: "Domainer"
-}, {
-  language: "Voltsillam",
-  translate: "Asoka"
-}, {
-  language: "Duobam",
-  translate: "Biodex"
-}, {
-  language: "Voltsillam",
-  translate: "Tres-Zap"
-}, {
-  language: "Daltfresh",
-  translate: "Treeflex"
-}, {
-  language: "Bytecard",
-  translate: "Job"
-}, {
-  language: "Fixflex",
-  translate: "Zamit"
-}, {
-  language: "Flexidy",
-  translate: "Tempsoft"
-}, {
-  language: "Daltfresh",
-  translate: "Latlux"
-}, {
-  language: "Duobam",
-  translate: "Zaam-Dox"
-}, {
-  language: "Regrant",
-  translate: "Home Ing"
-}, {
-  language: "Matsoft",
-  translate: "Flowdesk"
-}, {
-  language: "Alphazap",
-  translate: "Cookley"
-}, {
-  language: "Bitchip",
-  translate: "Cardguard"
-}, {
-  language: "Opela",
-  translate: "Sonsing"
-}, {
-  language: "Duobam",
-  translate: "Zaam-Dox"
-}]
+const datas = [
+  { language: "Mangan", translate: "Makan" },
+  { language: "Dolanan", translate: "Bermain" },
+  { language: "Ngendi", translate: "Dimana" },
+  { language: "Kanggo", translate: "Untuk" },
+  { language: "Ngombe", translate: "Minum" },
+  { language: "Ngertos", translate: "Mengerti" },
+  { language: "Dhewe", translate: "Sendiri" },
+  { language: "Nganggo", translate: "Menggunakan" },
+  { language: "Golek", translate: "Mencari" },
+  { language: "Sliramu", translate: "Anda" },
+  { language: "Ngerti", translate: "Paham" },
+  { language: "Jaluk", translate: "Meminta" },
+  { language: "Manganan", translate: "Makanan" },
+  { language: "Wong", translate: "Orang" },
+  { language: "Turu", translate: "Turun" },
+  { language: "Kepethuk", translate: "Terima" },
+  { language: "Gawe", translate: "Bekerja" },
+  { language: "Njaluk", translate: "Menginginkan" },
+  { language: "Kang", translate: "Yang" },
+  { language: "Kaki", translate: "Kaki" },
+  { language: "Mbok", translate: "Ibu" },
+  { language: "Gawe", translate: "Membuat" },
+  { language: "Kerja", translate: "Kerja" },
+  { language: "Soko", translate: "Dari" },
+  { language: "Wong", translate: "Manusia" },
+  { language: "Dadi", translate: "Menjadi" },
+  { language: "Ora", translate: "Tidak" },
+  { language: "Basa", translate: "Bahasa" },
+  { language: "Durasine", translate: "Durasi" },
+  { language: "Rumiyin", translate: "Terang" },
+  { language: "Ngadeg", translate: "Berdiri" },
+  { language: "Uga", translate: "Juga" },
+  { language: "Kowe", translate: "Kamu" },
+  { language: "Nulis", translate: "Menulis" },
+  { language: "Ngendi", translate: "Dimana" },
+  { language: "Tulung", translate: "Tolong" },
+  { language: "Saka", translate: "Dari" },
+  { language: "Neng", translate: "Ke" },
+  { language: "Ngrasakne", translate: "Merasakannya" },
+  { language: "Dek", translate: "Anak" },
+  { language: "Saben", translate: "Setiap" },
+  { language: "Wekasan", translate: "Terakhir" },
+  { language: "Seneng", translate: "Senang" },
+  { language: "Maring", translate: "Ke" },
+  { language: "Gendhing", translate: "Lagu" },
+  { language: "Ora", translate: "Tidak" },
+  { language: "Beda", translate: "Berbeda" },
+  { language: "Sudah", translate: "Sudah" },
+  { language: "Mulai", translate: "Mulai" },
+  { language: "Nyuwun", translate: "Meminta" },
+  { language: "Mlaku", translate: "Berjalan" },
+  { language: "Wonten", translate: "Ada" },
+  { language: "Gawe", translate: "Membuat" },
+  { language: "Ana", translate: "Ada" },
+  { language: "Maneh", translate: "Lagi" },
+  { language: "Ngucapake", translate: "Mengucapkan" },
+  { language: "Saben", translate: "Setiap" },
+  { language: "Dina", translate: "Hari" },
+  { language: "Kapisan", translate: "Terakhir" },
+  { language: "Gawe", translate: "Mengerjakan" },
+  { language: "Ora", translate: "Tidak" },
+  { language: "Jenenge", translate: "Namanya" },
+  { language: "Badhe", translate: "Akan" },
+  { language: "Kepengin", translate: "Ingin" },
+  { language: "Kembang", translate: "Bunga" },
+  { language: "Apa", translate: "Apa" },
+  { language: "Ngangeni", translate: "Menginginkan" },
+  { language: "Pikiran", translate: "Pikiran" },
+  { language: "Sing", translate: "Yang" },
+  { language: "Mundak", translate: "Lalu" },
+  { language: "Urip", translate: "Hidup" },
+  { language: "Pergi", translate: "Pergi" },
+  { language: "Takon", translate: "Tanya" },
+  { language: "Buka", translate: "Buka" },
+  { language: "Ngulon", translate: "Timur" },
+  { language: "Mlebu", translate: "Masuk" },
+  { language: "Ing", translate: "Di" },
+  { language: "Mandheg", translate: "Berhenti" },
+  { language: "Tresna", translate: "Cinta" },
+  { language: "Kanggo", translate: "Untuk" },
+  { language: "Jalaran", translate: "Karena" },
+  { language: "Sampun", translate: "Telah" },
+  { language: "Larang", translate: "Larang" },
+  { language: "Suwun", translate: "Terima kasih" },
+  { language: "Bentar", translate: "Sebentar" },
+  { language: "Sak", translate: "Satu" },
+  { language: "Garing", translate: "Rapuh" },
+  { language: "Nora", translate: "Bukan" },
+  { language: "Wates", translate: "Tangan" },
+  { language: "Sok", translate: "Sering" },
+  { language: "Telung", translate: "Tiga" },
+  { language: "Mati", translate: "Mati" },
+  { language: "Nggawe", translate: "Membuat" },
+  { language: "Saben", translate: "Setiap" },
+  { language: "Sewu", translate: "Seribu" },
+  { language: "Kekasih", translate: "Kekasih" },
+  { language: "Wengi", translate: "Malam" },
+  { language: "Lungguh", translate: "Tunggu" },
+  { language: "Kowe", translate: "Kamu" },
+  { language: "Mangan", translate: "Makan" },
+  { language: "Dolanan", translate: "Bermain" },
+  { language: "Ngendi", translate: "Dimana" },
+  { language: "Kanggo", translate: "Untuk" },
+  { language: "Ngombe", translate: "Minum" },
+  { language: "Ngertos", translate: "Mengerti" },
+  { language: "Dhewe", translate: "Sendiri" },
+  { language: "Nganggo", translate: "Menggunakan" },
+  { language: "Golek", translate: "Mencari" },
+  { language: "Sliramu", translate: "Anda" },
+  { language: "Ngerti", translate: "Paham" },
+  { language: "Jaluk", translate: "Meminta" },
+  { language: "Manganan", translate: "Makanan" },
+  { language: "Wong", translate: "Orang" },
+  { language: "Turu", translate: "Turun" },
+  { language: "Kepethuk", translate: "Terima" },
+  { language: "Gawe", translate: "Bekerja" },
+  { language: "Njaluk", translate: "Menginginkan" },
+  { language: "Kang", translate: "Yang" },
+  { language: "Kaki", translate: "Kaki" },
+  { language: "Mbok", translate: "Ibu" },
+  { language: "Gawe", translate: "Membuat" },
+  { language: "Kerja", translate: "Kerja" },
+  { language: "Soko", translate: "Dari" },
+  { language: "Wong", translate: "Manusia" },
+  { language: "Dadi", translate: "Menjadi" },
+  { language: "Ora", translate: "Tidak" },
+  { language: "Basa", translate: "Bahasa" },
+  { language: "Durasine", translate: "Durasi" },
+  { language: "Rumiyin", translate: "Terang" },
+  { language: "Ngadeg", translate: "Berdiri" },
+  { language: "Uga", translate: "Juga" },
+  { language: "Kowe", translate: "Kamu" },
+  { language: "Nulis", translate: "Menulis" },
+  { language: "Ngendi", translate: "Dimana" },
+  { language: "Tulung", translate: "Tolong" },
+  { language: "Saka", translate: "Dari" },
+  { language: "Neng", translate: "Ke" },
+  { language: "Ngrasakne", translate: "Merasakannya" },
+  { language: "Dek", translate: "Anak" },
+  { language: "Saben", translate: "Setiap" },
+  { language: "Wekasan", translate: "Terakhir" },
+  { language: "Seneng", translate: "Senang" },
+  { language: "Maring", translate: "Ke" },
+  { language: "Gendhing", translate: "Lagu" },
+  { language: "Ora", translate: "Tidak" },
+  { language: "Beda", translate: "Berbeda" },
+  { language: "Sudah", translate: "Sudah" },
+  { language: "Mulai", translate: "Mulai" },
+  { language: "Nyuwun", translate: "Meminta" },
+  { language: "Mlaku", translate: "Berjalan" },
+  { language: "Wonten", translate: "Ada" },
+  { language: "Gawe", translate: "Membuat" },
+  { language: "Ana", translate: "Ada" },
+  { language: "Maneh", translate: "Lagi" },
+  { language: "Ngucapake", translate: "Mengucapkan" },
+  { language: "Saben", translate: "Setiap" },
+  { language: "Dina", translate: "Hari" },
+  { language: "Kapisan", translate: "Terakhir" },
+  { language: "Gawe", translate: "Mengerjakan" },
+  { language: "Ora", translate: "Tidak" },
+  { language: "Jenenge", translate: "Namanya" },
+  { language: "Badhe", translate: "Akan" },
+  { language: "Kepengin", translate: "Ingin" },
+  { language: "Kembang", translate: "Bunga" },
+  { language: "Apa", translate: "Apa" },
+  { language: "Ngangeni", translate: "Menginginkan" },
+  { language: "Pikiran", translate: "Pikiran" },
+  { language: "Sing", translate: "Yang" },
+  { language: "Mundak", translate: "Lalu" },
+  { language: "Urip", translate: "Hidup" },
+  { language: "Pergi", translate: "Pergi" },
+  { language: "Takon", translate: "Tanya" },
+  { language: "Buka", translate: "Buka" },
+  { language: "Ngulon", translate: "Timur" },
+  { language: "Mlebu", translate: "Masuk" },
+  { language: "Ing", translate: "Di" },
+  { language: "Mandheg", translate: "Berhenti" },
+  { language: "Tresna", translate: "Cinta" },
+  { language: "Kanggo", translate: "Untuk" },
+  { language: "Jalaran", translate: "Karena" },
+  { language: "Sampun", translate: "Telah" },
+  { language: "Larang", translate: "Larang" },
+  { language: "Suwun", translate: "Terima kasih" }
+];
 for (let index = 0; index < datas.length; index++) {
   const random = Math.floor(Math.random() * 360) + 1;
   datas[index] = { ...datas[index], clr: random };
